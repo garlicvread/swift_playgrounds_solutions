@@ -1,0 +1,39 @@
+/*
+Goal: Decompose a solution across multiple functions.
+
+As you've just learned, it can b very useful to define a funcion that accomplishes a small task,
+then call that function within another function to accomplish an even bigger task.
+
+This practice makes your code more readable, because you can name a function based on its purpose; for example, turnAround().
+It also simplfies the process of writing code, because after you've written a function to perform a bigger task,
+you no longer have to think about the individual commands.
+
+1. Run the code to see what happens when solveRow() is called.
+2. Tweak the code inside solveRow() so that it solves a bigger chunk of the puzzle.
+3. Call solveRow() along with other commands to solve the puzzle.
+*/
+
+
+func collectGemTurnAround() {
+    moveForward()
+    moveForward()
+    collectGem()
+    turnLeft()
+    turnLeft()
+    moveForward()
+    moveForward()
+}
+
+
+func solveRow() {
+    collectGemTurnAround()
+    collectGemTurnAround()
+    turnRight()
+    moveForward()
+    turnLeft()
+}
+
+
+for i in 1...3 {
+    solveRow()
+}

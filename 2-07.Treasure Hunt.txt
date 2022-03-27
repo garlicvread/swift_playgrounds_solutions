@@ -1,0 +1,56 @@
+/*
+Challenge: Decompose patterns and create your own functions.
+
+In this last challenge, start by finding a small pattern of commands, and create a function that calls them.
+Use that function to start solving parts of the puzzle.
+
+Example
+func moveThenToggle()
+moveForward()
+moveForward()
+toggleSwitch()
+
+As you find more complex parts of the puzzle, define a new function that reuses what's in your first function.
+Then use both functions to solve the puzzle. 
+*/
+
+
+func move_then_toggle(){
+    moveForward()
+    moveForward()
+    toggleSwitch()
+}
+
+func move_2(){
+    moveForward()
+    moveForward()
+}
+
+func turn_around(){
+    turnRight()
+    turnRight()
+}
+
+turnLeft()
+
+move_then_toggle()
+move_then_toggle()
+turn_around()
+
+move_2()
+move_2()
+turnLeft()
+
+move_then_toggle()
+turn_around()
+
+move_2()
+
+move_then_toggle()
+turn_around()
+
+move_2()
+turnRight()
+
+move_then_toggle()
+move_then_toggle()
