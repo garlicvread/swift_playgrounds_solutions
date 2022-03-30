@@ -1,0 +1,57 @@
+/*
+Challenge: Practice pattern finding, decomposition, functions, and for loops.
+
+Don't be intimidated by this challenge; you can do it! 
+
+Start by focusing on the group of gems and the portal closest to your character.
+Can you figure out the pattern to collect the gems and move to the next location?
+*/
+
+
+func turnAround() {
+    for i in 1...2 {
+        turnRight()
+    }
+}
+
+
+func forward_collect_back() {
+    moveForward()
+    
+    if isOnGem {
+        collectGem()
+    }
+    
+    turnAround()
+}
+
+
+func forward_collect_left() {
+    moveForward()
+    
+    if isOnGem {
+        collectGem()
+    }
+    
+    turnLeft()
+}
+
+
+func gather_4_gems() {
+    forward_collect_left()
+    forward_collect_back()
+    forward_collect_left()
+    forward_collect_back()
+    forward_collect_left()
+    moveForward()
+    collectGem()
+    moveForward()
+}
+
+
+for i in 1...4 {
+    gather_4_gems()
+}
+
+
+
