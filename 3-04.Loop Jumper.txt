@@ -1,0 +1,16 @@
+/*
+Challenge: Identify the repeating pattern for jumping through the portals.
+
+In this challenge, a simple works for each of the gems.
+Figure out how to collect the first gem, and then see if that same pattern works for all of the gems.
+*/
+
+
+for i in 1...5 {
+    moveForward()
+    turnLeft()
+    moveForward()
+    moveForward()
+    collectGem()
+    turnRight()
+}
